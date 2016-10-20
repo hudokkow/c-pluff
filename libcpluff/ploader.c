@@ -1081,7 +1081,7 @@ static void check_cleanup_descriptor_parsing(cp_status_t status, cp_context_t *c
 					N_("Plug-in descriptor in %s is invalid."), path);
 				break;
 			case CP_ERR_IO:
-				cpi_errorf(context,
+				cpi_debugf(context,
 					N_("An I/O error occurred while loading a plug-in descriptor from %s."), path);
 				break;
 			case CP_ERR_RESOURCE:
