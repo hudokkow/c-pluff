@@ -119,7 +119,7 @@ if test "$enable_threads" != no; then
       [AC_LINK_IFELSE(
 [AC_LANG_SOURCE([#include <pthread.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
 	pthread_mutex_t mutex;
 	
 	pthread_mutex_init(&mutex, NULL);
@@ -138,7 +138,7 @@ int main(int argc, char *argv[]) {
       [AC_LINK_IFELSE(
 [AC_LANG_SOURCE([#include <windows.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char **argv) {
   CreateMutex(NULL, FALSE, NULL);
   return 0;
 }
