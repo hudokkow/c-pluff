@@ -25,10 +25,10 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "console.h"
 #if defined(HAVE_ISATTY_FILENO)
 #include <unistd.h>
 #endif
-#include "console.h"
 
 #define CMDLINE_SIZE 256
 
